@@ -10,6 +10,10 @@ spec:
     namespace: workload
     server: https://kubernetes.default.svc
   project: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
   source:
     path: workload/genesis
     repoURL: https://github.com/mcandeia/control-plane-desired-state
