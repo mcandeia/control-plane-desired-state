@@ -6,9 +6,10 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - http:
+  - host: "myservice.example.com"
+    http:
       paths:
-      - path: /httpbin
+      - path: "/"
         pathType: Prefix
         backend:
           service:
